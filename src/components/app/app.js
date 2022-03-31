@@ -1,6 +1,7 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-useless-constructor */
 import { Component } from 'react';
+import nextId from 'react-id-generator';
 
 import AppInfo from '../app-info/app-info';
 import SearchPanel from '../search-panel/search-panel';
@@ -14,11 +15,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [
-                {name: 'John S.', salary: 700, id: 1},
-                {name: 'Alex T.', salary: 3000, id: 2},
-                {name: 'Abby G.', salary: 5000, id: 3}
-            ]
+            data: []
         }
     }
 
@@ -31,6 +28,14 @@ class App extends Component {
 
             return {
                 data: data.filter(item => item.id !== id)
+            };
+        });
+    }
+
+    addItem = (name, salary) => {
+        this.setState(({data}) => {
+            return {
+                data: data.concat({name, salary, increase: false, id: nextId()})
             };
         });
     }
@@ -49,7 +54,9 @@ class App extends Component {
                     data={this.state.data}
                     onDelete={this.deleteItem}
                 />
-                <EmployeesAddForm/>
+                <EmployeesAddForm
+                    onAdd={this.addItem}
+                />
             </div>
         );
     }
