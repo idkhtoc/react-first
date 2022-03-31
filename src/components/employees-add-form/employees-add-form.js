@@ -39,6 +39,7 @@ class EmployeesAddForm extends Component {
                         className="form-control new-post-label"
                         placeholder="Как его зовут?"
                         name="name"
+                        required
                         value={name}            
                         onChange={this.onValueChange}
                     />
@@ -47,6 +48,7 @@ class EmployeesAddForm extends Component {
                         className="form-control new-post-label"
                         placeholder="З/П в $?"
                         name="salary"
+                        required
                         value={salary}        
                         onChange={this.onValueChange}
                     />

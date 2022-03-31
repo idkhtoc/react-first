@@ -35,15 +35,39 @@ class App extends Component {
     addItem = (name, salary) => {
         this.setState(({data}) => {
             return {
-                data: data.concat({name, salary, increase: false, id: nextId()})
+                data: data.concat({name, salary, increase: false, like: false, id: nextId()})
             };
         });
     }
 
+    onToggleProp = (id, prop) => {
+        // this.setState(({data}) => {
+        //     const index = data.findIndex(el => el.id === id),
+        //           oldItem = data[index],
+        //           newItem = {...oldItem, [prop]: !oldItem[prop]},
+        //           newData = [...data.slice(0, index), newItem, ...data.slice(index + 1)];
+        //     return {
+        //         data: newData
+        //     };
+        // });
+
+        this.setState(({data}) => ({
+            data: data.map(item => {
+                return item.id === id ? {...item, [prop]: !item[prop]} : item;
+            })
+        }));
+    }
+
     render() {
+        const allCount = this.state.data.length,
+              increasedCount = this.state.data.filter(item => item.increase).length;
+
         return (
             <div className="app">
-                <AppInfo/>
+                <AppInfo
+                    allCount={allCount}
+                    increasedCount={increasedCount}
+                />
 
                 <div className="search-panel">
                     <SearchPanel/>
@@ -53,6 +77,7 @@ class App extends Component {
                 <EmployeesList 
                     data={this.state.data}
                     onDelete={this.deleteItem}
+                    onToggleProp={this.onToggleProp}
                 />
                 <EmployeesAddForm
                     onAdd={this.addItem}
