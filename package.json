@@ -1,18 +1,26 @@
 {
 	"name": "react-first",
-	"version": "0.1.0",
+	"version": "1.0.0",
+	"description": "That's the first app I've created using React and create-react-app. It displays a list with employees you've added and allows to filter them, and increase their salary.",
+	"author": {
+    "name": "Oleksandr Yanov",
+    "email": "oleksandr.yanov.eu@gmail.com",
+		"url": "https://github.com/idkhtoc"
+  },
+	"contributors": [],
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/idkhtoc/react-first.git"
+  },
 	"private": true,
 	"homepage": "https://idkhtoc.github.io/react-first/",
+	"license": "MIT",
 	"dependencies": {
-		"@testing-library/jest-dom": "^5.16.3",
-		"@testing-library/react": "^12.1.4",
-		"@testing-library/user-event": "^13.5.0",
 		"classnames": "^2.3.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-id-generator": "^3.0.2",
-		"react-scripts": "5.0.0",
-		"web-vitals": "^2.1.4"
+		"react-scripts": "5.0.0"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -41,5 +49,10 @@
 	},
 	"devDependencies": {
 		"gh-pages": "^6.1.1"
-	}
+	},
+	"engines": {
+    "node": ">= 14.7.0",
+    "npm": ">= 7.0.0",
+    "yarn": "^1.22.0"
+  }
 }
