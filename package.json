@@ -3,15 +3,15 @@
 	"version": "1.0.0",
 	"description": "That's the first app I've created using React and create-react-app. It displays a list with employees you've added and allows to filter them, and increase their salary.",
 	"author": {
-    "name": "Oleksandr Yanov",
-    "email": "oleksandr.yanov.eu@gmail.com",
+		"name": "Oleksandr Yanov",
+		"email": "oleksandr.yanov.eu@gmail.com",
 		"url": "https://github.com/idkhtoc"
-  },
+	},
 	"contributors": [],
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/idkhtoc/react-first.git"
-  },
+		"type": "git",
+		"url": "https://github.com/idkhtoc/react-first.git"
+	},
 	"private": true,
 	"homepage": "https://idkhtoc.github.io/react-first/",
 	"license": "MIT",
@@ -51,8 +51,8 @@
 		"gh-pages": "^6.1.1"
 	},
 	"engines": {
-    "node": ">= 14.7.0",
-    "npm": ">= 7.0.0",
-    "yarn": "^1.22.0"
-  }
+		"node": ">= 14.7.0",
+		"npm": ">= 7.0.0",
+		"yarn": "^1.22.0"
+	}
 }
