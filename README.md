@@ -4,7 +4,7 @@
 
 That's the first app I've created using React and create-react-app. It displays a list with employees you've added and allows to filter them, and increase their salary.
 
-<img src="https://github.com/idkhtoc/react-first/assets/87912703/d52c25cb-2dd9-4eed-8dce-9292e8933696" alt="Image of project" width="500px" />
+<img src="https://github.com/idkhtoc/react-first/assets/87912703/02921170-cc9c-463d-af8b-67e28c74bc9e" alt="Image of project" width="600px" />
 
 ## Installation
 
